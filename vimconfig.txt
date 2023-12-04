@@ -1,0 +1,54 @@
+
+
+"Плагины
+call plug#begin()
+
+"1. цветовые схемы
+Plug 'morhetz/gruvbox'
+Plug 'ErichDonGubler/vim-sublime-monokai'
+Plug 'sainnhe/sonokai'
+Plug 'srcery-colors/srcery-vim'
+Plug 'tomasr/molokai'
+Plug 'sjl/badwolf'
+"2. дерево проекта (навигация по папкам)
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' } 
+"3. автодополнение текста
+Plug 'ycm-core/YouCompleteMe'
+"4. автодополнение парных символов
+Plug 'jiangmiao/auto-pairs'
+"5. плагин для работы с git
+Plug 'tpope/vim-fugitive'
+"6. плагин для отслеживания изменений в коде
+Plug 'airblade/vim-gitgutter'
+"7. плагин для навигации по проекту (нечёткий поиск по именам файлов)
+Plug 'kien/ctrlp.vim'
+"8. плагин для быстрого перемещения по тексту
+Plug 'easymotion/vim-easymotion'
+"9. строка состояния
+Plug 'vim-airline/vim-airline'
+"10. поиск в проекте
+Plug 'rking/ag.vim'
+
+call plug#end()
+
+"Дополнительные функции
+"1. нумерация строк
+set number  
+"2. подсветка искомого в файле
+set hlsearch 
+"3. инкрементальный поиск
+set incsearch 
+"4. подсветка кода
+syntax on 
+"5. меняем leaderkey с backspace на ","
+let g:mapleade=','
+"6. текущая цветовая схема
+colorscheme sublimemonokai
+set background=dark "тёмная тема для цветовой схемы gruvbox
+
+
+"Горячие клавиши
+"1. горячая клавиша для вызова плагина NERDTree - CNTRL+N
+map <C-n> :NERDTreeToggle<CR> 
+"2. горячая клавиша для вызова плагина easymorion - ","
+map <Leader> <Plug>(easymorion-prefix)
